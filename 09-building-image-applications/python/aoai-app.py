@@ -8,8 +8,6 @@ import json
 # import dotenv
 dotenv.load_dotenv()
 
- 
-
 # Assign the API version (DALL-E is currently supported for the 2023-06-01-preview API version only)
 client = AzureOpenAI(
   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
@@ -25,7 +23,7 @@ try:
 
     result = client.images.generate(
         model=model,
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils. It says "hello"',    # Enter your prompt text here
+        prompt='A crowd on a central square of Liublana greets the new king who is mid-aged and with a young beautiful spouse',    # Enter your prompt text here
         size='1024x1024',
         n=1
     )
